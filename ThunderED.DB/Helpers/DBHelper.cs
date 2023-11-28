@@ -1449,7 +1449,19 @@ namespace ThunderED
 
         #endregion
 
+        #region Groups
 
+        public static async Task AddOrUpdateGroup(ThdDiscordGroup group)
+        {
+            throw new NotImplementedException();
+        }
+
+        public static async Task RemoveGroup(ThdDiscordGroup group)
+        {
+            throw new NotImplementedException();
+        }
+
+        #endregion
 
     }
 }

@@ -1113,10 +1113,6 @@ insert into inv_custom_scheme (id, item_id, quantity) values (46311, 16646, 50);
             });
         }
 
-        //      await db.Database.ExecuteSqlRawAsync("");
-
-
-        
         [DBUpgrade("2.1.8")]
         private static async Task<bool> UpgradeV218(bool isSQLite, string version)
         {
@@ -1179,6 +1175,24 @@ insert into inv_custom_scheme (id, item_id, quantity) values (46311, 16646, 50);
                 await db.Database.ExecuteSqlRawAsync("alter table history_notifications add feeder_id bigint not null;");
             });
         }
+
+        [DBUpgrade("2.3.1")]
+        private static async Task<bool> UpgradeV231(bool isSQLite, string version)
+        {
+            return await UpgradeWrapper(version, async db =>
+            {
+                if (isSQLite)
+                {
+                    await db.Database.ExecuteSqlRawAsync(
+                        "create table discord_groups(id integer not null constraint discord_groups_pk primary key autoincrement, `name` text not null, directorCharacterId bigint null, discordRole text not null);");
+                }
+                else
+                {
+                    // ugh
+                }
+            });
+        }
+
         #endregion
     }
 }
