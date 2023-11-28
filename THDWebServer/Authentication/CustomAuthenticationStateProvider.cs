@@ -26,6 +26,7 @@ namespace THDWebServer.Authentication
         public const string ROLE_STRUCTURES = "struct";
         public const string ROLE_MOON_TABLE = "moon_table";
         public const string ROLE_FIT_CHECK = "fit_check";
+        public const string ROLE_GROUP_ADMIN = "group_admin";
 
         public ProtectedSessionStorage ProtectedSessionStore { get; set; }
 

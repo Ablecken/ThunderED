@@ -47,6 +47,8 @@ namespace ThunderED.Classes
 
             //dynamic modules - called in each tick
 
+            Modules.Add(new GroupsModule());
+
             if (SettingsManager.Settings.Config.ModuleAuthCheck)
                 Modules.Add(new AuthCheckModule());
 

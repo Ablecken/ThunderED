@@ -805,5 +805,10 @@
   "fitCheckReportPilotNames": "Pilot Names",
   "nmFitChecker": "Fit Checker",
   "webSettingsMoveRowBottom": "Move down",
-  "webSettingsMoveRowTop": "Move Up"
+  "webSettingsMoveRowTop": "Move Up",
+
+  "headerGroupPage": "Groups",
+  "headerGroupAdminPage": "Group Admin",
+  "nmGroupPage": "Groups",
+  "nmGroupAdminPage": "Group Admin"
 }

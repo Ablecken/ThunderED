@@ -54,6 +54,7 @@
         TokenUpdate,
         AccessToken,
         FitCheck,
-        Aggregator
+        Aggregator,
+        Groups
     }
 }

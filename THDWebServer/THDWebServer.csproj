@@ -57,6 +57,7 @@
 
   <ItemGroup>
     <Watch Remove="Pages\FitChecker.razor" />
+    <Watch Remove="Pages\Groups.razor" />
     <Watch Remove="Pages\HRM.razor" />
     <Watch Remove="Pages\MiningSchedule.razor" />
     <Watch Remove="Pages\Modals\AddFitModal.razor" />

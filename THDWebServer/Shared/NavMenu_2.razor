@@ -27,6 +27,17 @@
             </li>
         }
 
+        <AuthorizeView>
+            <li class="nav-item px-2">
+                <button class='navButton1' style="--beforeValue: url('@WebUiHelper.GetSvg("fits.svg")')" @onclick="NavButtonGroupsClick">@LM.Get("nmGroupPage")</button>
+            </li>
+        </AuthorizeView>
+        <AuthorizeView Roles="@CustomAuthenticationStateProvider.ROLE_GROUP_ADMIN">
+            <li class="nav-item px-2">
+                <button class='navButton1' style="--beforeValue: url('@WebUiHelper.GetSvg("feed.svg")')" @onclick="NavButtonGroupAdminClick">@LM.Get("nmGroupAdminPage")</button>
+            </li>
+        </AuthorizeView>
+
         @if (SettingsManager.Settings.WebAuthModule.DisplayFeedAuthWithoutRegistration)
         {
             <li class="nav-item px-2">
@@ -140,6 +151,16 @@
     private void NavButtonFitsClick()
     {
         Nav.NavigateTo(ServerPaths.GetFitCheckerPageUrl());
+    }
+
+    private void NavButtonGroupsClick()
+    {
+        Nav.NavigateTo(ServerPaths.GetGroupsPageUrl());
+    }
+
+    private void NavButtonGroupAdminClick()
+    {
+        Nav.NavigateTo(ServerPaths.GetGroupAdminPageUrl());
     }
 
 }

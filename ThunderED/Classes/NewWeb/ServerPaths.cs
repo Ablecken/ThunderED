@@ -47,6 +47,15 @@ namespace ThunderED.Classes
         {
             return "/timers";
         }
+        public static string GetGroupsPageUrl()
+        {
+            return "/groups";
+        }
+
+        public static string GetGroupAdminPageUrl()
+        {
+            return "/groups/admin";
+        }
 
         public static string GetMiningSchedulePageUrl()
         {
@@ -276,5 +285,6 @@ namespace ThunderED.Classes
         {
             return $"{GetWebSiteUrl()}/fitcheck";
         }
+
     }
 }

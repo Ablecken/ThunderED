@@ -1,0 +1,29 @@
+﻿@page "/groups"
+
+@attribute [Authorize]
+@inject ProtectedSessionStorage Store
+@inject NavigationManager Nav
+
+@inject ThunderedDbContext DbContext
+
+<div class="text-center pageHeader">
+    @LM.Get("headerGroupPage")
+</div>
+
+<div class="container">
+</div>
+
+@functions {
+
+    protected override async Task OnInitializedAsync()
+    {
+        var user = await Store.GetAsync<WebAuthUserData>("user");
+        if (user == null)
+        {
+            Nav.NavigateTo("/", true);
+            return;
+        }
+        
+        await base.OnInitializedAsync();
+    }
+}
